@@ -1,0 +1,38 @@
+[
+  {
+    "nome_pc": "PC-STAGE03Y",
+    "data": "2026-04-27 10:46:43",
+    "statistiche": {
+      "file_scansionati": 601,
+      "errori": 0,
+      "tempo_elaborazione_sec": 7
+    }
+  },
+  {
+    "nome_pc": "PC-STAGE03Y",
+    "data": "2026-04-27 11:06:29",
+    "statistiche": {
+      "file_scansionati": 614,
+      "errori": 0,
+      "tempo_elaborazione_sec": 8
+    }
+  },
+  {
+    "nome_pc": "PC-STAGE03Y",
+    "data": "2026-04-27 11:10:29",
+    "statistiche": {
+      "file_scansionati": 617,
+      "errori": 0,
+      "tempo_elaborazione_sec": 7
+    }
+  },
+  {
+    "nome_pc": "PC-STAGE03Y",
+    "data": "2026-04-27 11:14:27",
+    "statistiche": {
+      "file_scansionati": 621,
+      "errori": 0,
+      "tempo_elaborazione_sec": 9
+    }
+  }
+]

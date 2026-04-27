@@ -1,0 +1,17 @@
+# Render Blueprint per ScannerSemplice Server
+# Questo file permette a Render di configurare automaticamente il servizio.
+# Carica la cartella ScannerSemplice_Server su Render o usa il Blueprint.
+
+services:
+  - type: web
+    name: scannersemplice-server
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -w 4 -b 0.0.0.0:$PORT app:app
+    envVars:
+      - key: API_KEY
+        value: "hallay-2018"
+
+      - key: PYTHON_VERSION
+        value: "3.11"
