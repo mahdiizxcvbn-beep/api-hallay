@@ -1,5 +1,5 @@
 {
   "server_url": "http://localhost:5000/api/stats",
-
+  "api_key": "hallay-2018"
 }
 

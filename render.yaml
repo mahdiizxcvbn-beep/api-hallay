@@ -6,12 +6,32 @@ services:
   - type: web
     name: scannersemplice-server
     runtime: python
-    plan: free
+    plan: starter
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn -w 4 -b 0.0.0.0:$PORT app:app
+    startCommand: gunicorn -w 2 -b 0.0.0.0:$PORT app:app
+    healthCheckPath: /api/history
+    disk:
+      name: scanner-data
+      mountPath: /var/data
+      sizeGB: 1
     envVars:
       - key: API_KEY
-        value: "hallay-2018"
+        sync: false
+
+      - key: DATA_DIR
+        value: /var/data
+
+      - key: GITHUB_TOKEN
+        sync: false
+
+      - key: GITHUB_REPO
+        sync: false
+
+      - key: GITHUB_BRANCH
+        value: main
+
+      - key: GITHUB_HISTORY_PATH
+        value: server/history.json
 
       - key: PYTHON_VERSION
         value: "3.11"
